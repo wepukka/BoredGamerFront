@@ -1,0 +1,13 @@
+#dropdown {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+}
+
+#dropdown:focus {
+  border-color: #e5e0ff;
+  box-shadow: 0 0 0 0.25rem rgba(239, 243, 241, 0.25);
+}
