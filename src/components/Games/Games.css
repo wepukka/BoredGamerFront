@@ -16,6 +16,7 @@
 
 .game-card {
   display: flex;
+  background-color: #7286d3;
   flex-direction: column;
   width: 250px;
   height: 250px;
@@ -53,7 +54,7 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-  .game-container {
-    width: 80%;
+  .games-container {
+    width: 90%;
   }
 }
