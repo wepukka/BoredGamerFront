@@ -5,24 +5,14 @@
   align-items: center;
   height: 200px;
   width: 80%;
-  min-width: px;
   color: white;
 }
 
 .search-box {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   height: 100%;
-}
-
-.search-container {
-  display: flex;
-  flex-direction: row;
-  font-size: 12px;
-  margin-right: 20px;
-}
-
-.search-container > div {
-  width: 120px;
 }
 
 .page-logo {
@@ -32,12 +22,29 @@
 }
 
 .info {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
+
 .info p {
   padding: 0;
   margin: 0;
+}
+
+.search-container {
+  flex: 1;
+}
+
+.search-row {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.search-row > div {
+  width: 120px;
 }
 
 .search-button {
