@@ -49,8 +49,8 @@ export default function SearchBox({ setValue }) {
 
         <div className="search-container">
           <div className="search-row">
-            <div>Platform</div>
-            <div>Genre</div>
+            <div className="media-350px-display-toggle">Platform</div>
+            <div className="media-350px-display-toggle">Genre</div>
           </div>
           <div className="search-row">
             <DropDownMenu values={platforms} setValue={setPlatform} />

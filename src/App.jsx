@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <SearchBox setValue={setGames} />
-      <Games games={games} />
+      <Games games={games.data} />
     </div>
   );
 }
