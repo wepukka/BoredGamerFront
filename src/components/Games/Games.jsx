@@ -11,7 +11,13 @@ export default function Games({ games }) {
   useEffect(() => {
     if (games) {
       setSlicedGames(games.slice(0, 20));
+
+      if (games.length <= 20) {
+        setHasMore(false)
+      }
+      else { setHasMore(true)}
     }
+    
   }, [games]);
 
   const nextGames = () => {
