@@ -4,8 +4,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function Games({ games }) {
   const [hasMore, setHasMore] = useState(true);
-  const [loading, setLoading] = useState("");
-
   const [slicedGames, setSlicedGames] = useState([]);
 
   useEffect(() => {
@@ -13,16 +11,15 @@ export default function Games({ games }) {
       setSlicedGames(games.slice(0, 20));
 
       if (games.length <= 20) {
-        setHasMore(false)
+        setHasMore(false);
+      } else {
+        setHasMore(true);
       }
-      else { setHasMore(true)}
     }
-    
   }, [games]);
 
   const nextGames = () => {
     if (games) {
-      setLoading("Loading..");
       setTimeout(() => {
         setSlicedGames(games.slice(0, slicedGames.length + 20));
       }, 1000);
@@ -32,7 +29,27 @@ export default function Games({ games }) {
     }
   };
 
-  if (!games) return <div className="search-message"></div>;
+  const loadingText = (
+    <p
+      style={{
+        color: "white",
+        fontWeight: "bold",
+        fontSize: "20px",
+        textAlign: "center",
+      }}
+    >
+      LOADING...
+    </p>
+  );
+
+  if (!games) {
+    return <div className="search-message">Hit the search button! </div>;
+  }
+
+  if (games.length === 0)
+    return (
+      <div className="search-message">No games with selected options :(</div>
+    );
 
   return (
     <div className="games-container">
@@ -40,18 +57,7 @@ export default function Games({ games }) {
         dataLength={slicedGames.length} //This is important field to render the next data
         next={nextGames} // Add more games to array
         hasMore={hasMore}
-        loader={
-          <p
-            style={{
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "20px",
-              textAlign: "center",
-            }}
-          >
-            {loading}
-          </p>
-        }
+        loader={loadingText}
       >
         <div className="games-wrapper">
           {slicedGames.map((game, index) => {

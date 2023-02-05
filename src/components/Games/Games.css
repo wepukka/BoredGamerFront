@@ -22,8 +22,9 @@
   display: flex;
   background-color: #7286d3;
   flex-direction: column;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+  min-width: 100px;
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
@@ -33,7 +34,7 @@
   margin-bottom: 20px;
 }
 
-.game-card div,
+.game-card > div,
 a {
   margin-left: 10px;
   white-space: nowrap;
@@ -41,11 +42,9 @@ a {
   text-overflow: ellipsis;
 }
 
-.detail {
-  display: flex;
-  flex: 1;
-  align-items: flex-end;
-  margin-bottom: 5px;
+.detail div {
+  display: inline;
+  padding-right: 10px;
 }
 
 .search-message {
@@ -55,10 +54,13 @@ a {
   padding: 10px;
   font-weight: bold;
   color: white;
+  font-size: 30px;
 }
 
 @media only screen and (max-width: 600px) {
   .games-container {
     width: 90%;
+    background: none;
+    border: none;
   }
 }
