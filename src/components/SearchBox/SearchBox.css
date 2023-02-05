@@ -67,7 +67,6 @@
 @media only screen and (max-width: 600px) {
   .search-box-container {
     width: 100%;
-    flex-direction: column;
   }
   .search-container {
     align-items: center;
@@ -77,8 +76,6 @@
   }
   .search-row {
     gap: 5px;
-  }
-  .search-row {
     flex-direction: column;
   }
 }
