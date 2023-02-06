@@ -1,5 +1,4 @@
 .games-container {
-  display: flex;
   width: 80%;
   border-style: solid;
   border-radius: 3px;
@@ -7,15 +6,15 @@
   background-color: #7286d3;
   padding-top: 10px;
   margin-bottom: 20px;
-  color: #fff2f2;
+  border-color: #fff2f2;
 }
 
 .games-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   justify-content: center;
   color: #fff2f2;
+  gap: 20px;
 }
 
 .game-card {
@@ -24,14 +23,10 @@
   flex-direction: column;
   width: 200px;
   height: 200px;
-  min-width: 100px;
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
   border-color: white;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
 
 .game-card > div,

@@ -33,7 +33,7 @@ export default function SearchBox({ setValue }) {
   };
 
   return (
-    <div className="search-box-container">
+    <div className="search-bar">
       <div className="page-logo">
         <img
           id="boredGamerImg"
@@ -42,12 +42,12 @@ export default function SearchBox({ setValue }) {
           style={{ width: "150px" }}
         />
       </div>
-      <div className="search-box">
+      <div className="search-container">
         <div className="info">
           <TopParagraph />
         </div>
 
-        <div className="search-container">
+        <div className="search">
           <div className="search-row">
             <div>Platform</div>
             <div>Genre</div>
