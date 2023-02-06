@@ -70,4 +70,8 @@ a {
     background: none;
     border: none;
   }
+  .game-card {
+    width: 200px;
+    height: 200px;
+  }
 }
