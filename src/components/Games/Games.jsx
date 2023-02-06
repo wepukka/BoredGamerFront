@@ -30,16 +30,9 @@ export default function Games({ games }) {
   };
 
   const loadingText = (
-    <p
-      style={{
-        color: "white",
-        fontWeight: "bold",
-        fontSize: "20px",
-        textAlign: "center",
-      }}
-    >
-      LOADING...
-    </p>
+    <div className="loader">
+      <p>LOADING...</p>
+    </div>
   );
 
   if (!games) {
